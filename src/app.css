@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    border-radius: 50px;
+    transition: all 0.4s;
+    @apply bg-green-600 h-10 w-10 !important;
+}
+
+.back-to-top i {
+    @apply text-xl text-white;
+}
+
+.back-to-top:hover {
+    @apply bg-green-500 text-white transition-colors duration-300 !important;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Pour une transition de défilement en douceur */
+html {
+    @apply scroll-smooth scroll-pt-32;
+}
+
+/* Scrollbar custom */
+html::-webkit-scrollbar {
+    @apply w-2 px-1;
+}
+
+html::-webkit-scrollbar-track {
+   @apply bg-white;
+}
+
+html::-webkit-scrollbar-thumb {
+    @apply bg-green-600 rounded-3xl;
+}
+
+#anime:hover {
+    @apply dark:text-gray-300 text-green-700;
+}
+#animation:hover {
+    @apply transform scale-110 transition duration-300 ease-in delay-75;
+}
+.active {
+    @apply text-green-700 bg-gray-200 md:bg-transparent;
+}
+ .dark .active {
+    @apply bg-gray-600 md:bg-transparent border-b-2 border-solid border-green-700;
+ }
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+}
+
+.transition-hover:hover div>h3, .transition-hover:hover div>span {
+    @apply text-white;
+}
+
+.transition-hover:hover div>p {
+    @apply text-green-500;
+}
+
+.box:hover .image>img {
+    @apply transition-transform duration-500 transform scale-110;
+}
+
+.image>h3 {
+    @apply transition-all duration-500 transform;
+}
+
+.box:hover .image>h3 {
+    @apply translate-x-0 opacity-100;
+}
+
+::placeholder {
+    @apply dark:text-white/80;
+}
+
+.boxes a:hover i {
+    @apply pr-4 transition-all duration-300 ease-in;
+}
